@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-user',
 	templateUrl: './user.component.html'
 })
-export class UserComponent {}
+export class UserComponent {
+	
+	@Input() user;
+}
