@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { UsersService } from './users.sevice.ts';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UsersService]
 })
 export class AppComponent {
-  users = [
-  {name: 'WFM1',image: 'http://materializecss.com/images/office.jpg'},
-  {name: 'WFM2',image: 'http://materializecss.com/images/sample-1.jpg'},
-  {name: 'WFM3',image: 'http://materializecss.com/images/sample-1.jpg'},
-  {name: 'WFM4',image: 'http://materializecss.com/images/sample-1.jpg'},
-  {name: 'WFM5',image: 'http://materializecss.com/images/sample-1.jpg'},
-  {name: 'WFM6',image: 'http://materializecss.com/images/sample-1.jpg'}
-  ]
+ this.users = [];
+ constructor (private usersService: UsersService){}
+  this.ngOnInit= {
+  this: .users = this.usersService.users
+    }
 }
