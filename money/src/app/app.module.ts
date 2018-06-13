@@ -7,6 +7,7 @@ import {AuthModule} from './auth/auth.module';
 import {AppRoutingModule} from './app-routing.module';
 import {UsersService} from './shead/services/users.service';
 import {AuthService} from './shead/services/auth.service';
+import {SystemModule} from './system/system.module';
 
 
 
@@ -18,9 +19,10 @@ import {AuthService} from './shead/services/auth.service';
     BrowserModule,
     HttpModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SystemModule
   ],
-  providers: [UsersService,AuthService],
+  providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,12 @@
       "email": "petechukvlad@gmail.com",
       "password": "12345678",
       "name": "Администратор"
+    },
+    {
+      "email": "vladeruku@gmail.com",
+      "password": "0258764",
+      "name": "Eruku_Vlad",
+      "id": 2
     }
   ],
   "bill": {
