@@ -3,14 +3,17 @@
     Страница счета <span class="sparkline bar"></span>
   </h3>
   <div class="pull-right">
-    <button class="btn-sm btn btn-primary-outline">
+    <button class="btn-sm btn btn-primary-outline" (click)="onRefresh()">
       <i class="fa fa-refresh"></i>
     </button>
   </div>
 </div>
 <section class="section">
-  <div class="row">
-    <prj-bill-card></prj-bill-card>
+  <div class="row text-center" *ngIf="!isLoad">
+    Loading ...
+  </div>
+  <div class="row" *ngIf="isLoad">
+    <prj-bill-card [bill]="bill" [currency]="currency"></prj-bill-card>
     <prj-currency-card></prj-currency-card>
   </div>
 </section>
